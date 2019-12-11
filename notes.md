@@ -34,3 +34,11 @@ OR...
 --A `foreign key` is a column which pairs to another table's primary key showing the relationship between the rows
 OR... (I like this definition the least tbh, b/c it is hella vague.)
 --A `foreign key` is a column or group of columns in a relational database table that provides a link between data in two tables. It acts as a cross-reference between tables because it references the primary key of another table, thereby establishing a link between them.
+
+## (Layers) Application Architecture
+
+_Opinion_
+For an API we normally have (at least) three layers:
+- Routing (this is the `express` i stuff, the endpoints, the middleware) -> routers, middleware, etc
+- Data Access (this is the Knex + SqLite||Postgres stuff) -> you can name it anything, but it is the 'models', like in your sprint challenge, with the action-model and project-model files...
+- Business Logic (this makes your application unique) -> regular pure functions packed into a module

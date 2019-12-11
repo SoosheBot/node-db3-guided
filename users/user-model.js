@@ -13,15 +13,15 @@ function allUsers() {
 }
 
 function findById(id) {
-    return db('users').where({id});
+    return db('users').where({id}).first();
 }
 
 function add(user) {
     return db('users')
       .insert(user, 'id')
       .then(([id]) => this.get(id)); // destructured
-      //can also write it this way .then(id => {
-    //  const [id] = id;
+      //can also write it this way .then(ids => {
+    //  const [id] = ids;
     //  return findById(id);
     //  })
   }
